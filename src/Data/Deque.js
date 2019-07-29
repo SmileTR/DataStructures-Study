@@ -24,9 +24,10 @@ const Deque =  class Deque {
     addFront(item){
         if (this.isEmpty()){
             this.addBack(item)
+        }else{
+            this.topCount--
+            this.items[this.topCount] = item
         }
-        this.topCount --
-        this.items[this.topCount] = item
     }
     //双端队列末尾添加元素
     addBack(item){
@@ -95,6 +96,9 @@ const Deque =  class Deque {
 
 module.exports = Deque
 
+// const deque = new Deque()
+// deque.addFront(1)
+// console.log(deque)
 // const deque = new Deque()
 // console.log(deque.isEmpty())    // true
 // deque.addBack(8)    

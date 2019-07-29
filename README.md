@@ -7,6 +7,8 @@ Stack(栈)
 Queue(队列)
 
 Deque(双端队列)
+
+LinkedList(链表)
 ```
 ## Function
 ```
