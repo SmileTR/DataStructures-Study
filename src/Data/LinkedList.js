@@ -75,4 +75,40 @@ export default class LinkedList {
         }
         return false
     }
+    //返回链表中一个元素的位置
+    indexOf(item){
+        let current = this.head
+        for (let i = 0; i < this.count && current != null; i++){
+            if(this.equalsFn(item,current.item)){
+                return i 
+            }
+            current = current.next
+        }
+        return -1
+    }
+    //链表长度
+    size(){
+        return this.count
+    }
+    //链表是否为空
+    isEmpty(){
+        return this.size() === 0
+    }
+    //获取链表头部
+    getHead(){
+        return this.head
+    }
+    toString(){
+        if (this.head == null){
+            return ''
+        }
+        let objString = `${this.head.item}`
+        let current = this.head.next
+        for (i = 1; i < this.count; i++){
+            objString = `${objString},${current.item}`
+            current = current.next
+        }
+        return objString
+    }
+
 }
