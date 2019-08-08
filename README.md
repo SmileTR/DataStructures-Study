@@ -9,6 +9,8 @@ Queue(队列)
 Deque(双端队列)
 
 LinkedList(链表)
+
+DoublyLinkedList(双向列表)
 ```
 ## Function
 ```
