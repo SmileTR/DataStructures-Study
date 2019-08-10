@@ -13,6 +13,8 @@ LinkedList(链表)
 DoublyLinkedList(双向列表)
 
 CircularLinkedList(循环链表)
+
+SortedLinkedList(有序链表)
 ```
 ## Function
 ```
