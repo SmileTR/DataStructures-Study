@@ -1,3 +1,3 @@
-export const defaultEquaks = (a,b) => {
+export const defaultEquals = (a,b) => {
     return a === b
 }

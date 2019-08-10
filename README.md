@@ -11,6 +11,8 @@ Deque(双端队列)
 LinkedList(链表)
 
 DoublyLinkedList(双向列表)
+
+CircularLinkedList(循环链表)
 ```
 ## Function
 ```
