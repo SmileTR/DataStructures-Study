@@ -1,16 +1,7 @@
-import defaultToString from '../util/defaultToString'
+const defaultToString = require('../util/defaultToString')
+const ValuePair = require('../util/ValuePair')
 
-class ValuePair {
-    constructor(key,value){
-        this.key = key
-        this.value = value
-    }
-    toString(){
-        return `[#${key}: ${value}]`
-    }
-}
-
-export default class Dictionary {
+const Dictionary = class Dictionary {
     constructor(toStrFn = defaultToString){
         this.toStrFn = toStrFn
         this.table = {}
@@ -82,3 +73,9 @@ export default class Dictionary {
         return objString
     }
 }
+
+module.exports = Dictionary
+
+const dictionary = new Dictionary()
+dictionary.set('name','tr')
+console.log(dictionary)

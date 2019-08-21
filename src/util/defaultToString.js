@@ -1,4 +1,4 @@
-export default (item) => {
+const defaultToString = (item) => {
     if (item === null){
         return 'null'
     }else if (item === undefined){
@@ -8,3 +8,5 @@ export default (item) => {
     }
     return item.toString()
 }
+
+module.exports = defaultToString
