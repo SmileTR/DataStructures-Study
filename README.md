@@ -19,6 +19,10 @@ SortedLinkedList(有序链表)
 Set(集合)
 
 Dictionary(字典)
+
+HashTable(散列表)
+
+HashTableSeparateChaining(散列表分离链接)
 ```
 ## Function
 ```

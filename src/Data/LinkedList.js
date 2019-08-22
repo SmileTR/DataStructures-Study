@@ -1,7 +1,7 @@
-import { defaultEquals } from '../util/defaultEquals'
-import Node from '../util/Node'
+const defaultEquals = require('../util/defaultEquals')
+const Node = require('../util/Node')
 
-export default class LinkedList {
+module.exports = class LinkedList {
     constructor(equalsFn = defaultEquals){
         this.count = 0
         this.head = undefined
@@ -85,6 +85,11 @@ export default class LinkedList {
             current = current.next
         }
         return -1
+    }
+    //从链表中移除元素
+    remove(item){
+        const index = this.indexOf(item)
+        return this.removeAt(index)
     }
     //链表长度
     size(){
