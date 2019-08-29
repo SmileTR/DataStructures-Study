@@ -62,4 +62,77 @@ const BinarySearchTree = class BinarySearchTree {
             callback(node.key)
         }
     }
+    //搜索最小值
+    min(){
+        return this.minNode(this.root)
+    }
+    minNode(node){
+        let current = node
+        while (current != null && current.left != null){
+            current = current.left
+        }
+        return current
+    }
+    //搜索最大值
+    max(){
+        return this.maxNode(this.root)
+    }
+    maxNode(node){
+        let current = node
+        while (current != null && current.right != null){
+            current = current.right
+        }
+        return current
+    }
+    //搜索指定值
+    search(key){
+        return this.searchNode(this.root, key)
+    }
+    searchNode(node,key){
+        if (node == null){
+            return false
+        }
+        if (this.compareFn(key,node.key) === Compare.LESS_THAN){
+            return this.searchNode(node.left, key)
+        }else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN){
+            return this.searchNode(nodel.right, key)
+        }else{
+            return true
+        }
+    }
+    //移除一个节点
+    remove(key){
+        return this.root = this.removeNode(node, key)
+    }
+    removeNode(node, key){
+        if (node == null){
+            return null
+        }
+        if (this.compareFn(key, node.key) === Compare.LESS_THAN){
+            node.left = this.removeNode(node.left, key)
+            return node
+        }else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN){
+            node.right = this,this.removeNode(node.right, key)
+            return node
+        }else{
+            //1
+            if (node.left == null && node.right == null){
+                node = null
+                return node
+            }
+            //2
+            if (node.left == null){
+                node = node.right
+                return node
+            }else if (node.right == null){
+                node = node.left
+                return node
+            }
+            //3
+            const aux = this.minNode(node.right)
+            node.key = aux.key
+            node.right = this.removeNode(node.right, aux.key)
+            return node
+        }
+    }
 }

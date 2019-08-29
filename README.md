@@ -23,6 +23,10 @@ Dictionary(字典)
 HashTable(散列表)
 
 HashTableSeparateChaining(散列表分离链接)
+
+HashTableLinearProbing(散列表线性探查)
+
+BinarySearchTree(二叉搜索树)
 ```
 ## Function
 ```
